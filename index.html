@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Game</title>
+    <style>
+        body{
+            font-family: 'Open Sans', sans-serif;
+        }
+        p{
+            font-style: italic;
+            font-weight: bolder;
+        }
+        .class {
+    
+    width: 725px;
+    height: 500px;
+    background-color: #bff5ac;
+    border: 2px solid black;
+    border-radius: 39px;
+        } 
+        .f{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+        }
+    </style>
+</head>
+<body >
+    <div class="f">
+    <div class="class">
+    <h1 align="center">Guessing The Number</h1>
+    <center><button type="button" onclick="gussing()">Start Game</button></center>
+    <center><p id="container1"></p>
+    <p id="container2"></p></center>
+    </div></div>
+    <script>
+     function gussing(){
+       
+           a=prompt("Enter The Number between 0 and 10")
+            b="you win!"
+            txt=""
+            i=1
+        
+           if(a>=0&&a<=10){
+            while(i<=5)
+            {
+                num=Math.floor(Math.random()*10)
+               txt+="Computer Guessed " +  num+"<br>" 
+         
+           if(a==num){
+            c+="you lose!"
+            break;
+           }
+           i++;
+           }
+           document.getElementById("container1").innerHTML= txt
+           document.getElementById("container2").innerHTML=b
+           document.getElementById("container2").innerHTML=c
+
+
+        }
+           else{
+            prompt("invalid")
+           }   
+           
+      }
+
+
+
+    </script>
+    
+    
+</body>
+</html>
